@@ -5,11 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "rimraf dist && vue-cli-service build --target lib ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vue-grid-layout.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "@interactjs/actions": "^1.10.0",
+    "@interactjs/auto-start": "^1.10.0",
+    "@interactjs/dev-tools": "^1.10.0",
+    "@interactjs/interactjs": "^1.10.0",
+    "@interactjs/modifiers": "^1.10.0",
+    "element-resize-detector": "^1.2.1",
+    "tiny-emitter": "^2.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -18,7 +26,12 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "vue": "^3.0.0",
+    "babel-plugin-transform-flow-comments": "^6.7.0",
+    "node-sass": "^4.13.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.1"
   },
   "eslintConfig": {
     "root": true,
@@ -32,7 +45,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/custom-event-name-casing": "off"
+    }
   },
   "browserslist": [
     "> 1%",
