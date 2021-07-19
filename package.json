@@ -8,7 +8,7 @@
     "build-lib": "rimraf dist && vue-cli-service build --target lib ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "dist/vue-grid-layout.common.js",
+  "main": "dist/vue-grid-layout-vue3.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "@interactjs/actions": "^1.10.0",
